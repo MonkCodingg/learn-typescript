@@ -11,3 +11,20 @@ let num: number = 10;
 let arr: Array<number> = [1, 2, 3];
 let heross: Array<string> = ['Capt', 'Thor', 'Hulk', 10];
 let items: number[] = [1, 2, 3];
+
+// ts 튜플
+let address: [string, number] = ['gangnam', 100];
+
+// ts 객체
+let obj: object = {};
+// let person: object = {
+//   name: 'capt',
+//   age: 100
+// };
+let person: { name: string, age: number } = {
+  name: 'thor',
+  age: 1000
+}
+
+// ts 진위값
+let show: boolean = true;
