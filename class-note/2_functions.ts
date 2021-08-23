@@ -10,7 +10,9 @@ function add(): number {
   return 10;
 }
 
-//함수 종합 정의 방식
+//함수 타입 정의 방식
 function sum(a: number, b: number): number {
   return a + b;
 }
+
+sum(10, 20, 30, 40);
