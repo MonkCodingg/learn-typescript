@@ -33,3 +33,12 @@ function asksomeone(someone: Developer | Person) {
   someone.age;
 }
 
+function askSomeone(someone: Developer & Person) {
+  someone.name;
+  someone.skill;
+  someone.age;
+}
+
+var seho: string | number | boolean;
+var capt: string & number & boolean;
+
