@@ -28,13 +28,28 @@
 // }
 
 //유니온 타입을 이용한 선언 방식 문제점
-function logText(text: string | number) {
+// function logText(text: string | number) {
+//   console.log(text);
+//   return text;
+// }
+
+//const a = logText('a');
+//logText(10);
+// const num = LogNumber(10);
+// logText(true);
+
+function logText<T>(text: T): T {
   console.log(text);
   return text;
 }
 
-const a = logText('a');
-a.split
-logText(10);
-// const num = LogNumber(10);
-// logText(true);
+// 타입에 무엇이 들어갈 지 호출 시점에 정의
+// 타입을 추론해서 최종 반환값까지 
+const str = logText<string>('abc');
+str.split('')
+const login = logText<boolean>(true);
+
+
+
+logText('a')
+logText(10)
