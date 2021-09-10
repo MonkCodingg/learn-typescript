@@ -43,13 +43,23 @@ function logText<T>(text: T): T {
   return text;
 }
 
-// 타입에 무엇이 들어갈 지 호출 시점에 정의
-// 타입을 추론해서 최종 반환값까지 
 const str = logText<string>('abc');
 str.split('')
 const login = logText<boolean>(true);
 
+// logText('a')
+// logText(10)
 
+// 인터페이스에 제네릭을 선언하는 방법
+// interface Dropdown {
+//   value: string;
+//   selected: boolean;
+// }
 
-logText('a')
-logText(10)
+// const obj: Dropdown = { value: 'abc', selected: false };
+
+interface Dropdown<T> {
+  value: T;
+  selected: boolean;
+}
+const obj: Dropdown<string> = { value: 'abc', selected: false };
