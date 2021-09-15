@@ -34,3 +34,6 @@ var detailedItem: DetailedDropdown<number> = {
     value: 'a',
     tag: 'a'
 }
+
+// Best Common Type
+var arr = [1,2,true];
